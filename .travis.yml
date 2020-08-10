@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "12"
+install:
+  - npm install
+script:
+  - npm run clean
+  - npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist
+  repo: b00303037/cicd-demo
