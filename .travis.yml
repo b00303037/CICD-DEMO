@@ -1,7 +1,7 @@
 dist: trusty
-sudo: required
 
 language: node_js
+os: linux
 node_js:
   - "12"
 
@@ -16,10 +16,11 @@ install:
   - npm install
 script:
   - npm run build
-  - npm run coveralls
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - npm run test --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox
+after_script:
+  - cat ./coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 deploy:
+  strategy: git
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
