@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --base-href=/cicd-demo/",
     "test": "ng test",
-    "coveralls": "ng test --watch=false --code-coverage",
+    "coveralls": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
