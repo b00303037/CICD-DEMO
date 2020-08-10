@@ -4,10 +4,12 @@ node_js:
 install:
   - npm install
 script:
-  - npm run build
+  - npm run build:pages
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local-dir: dist
-  repo: b00303037/cicd-demo
+  keep_history: true
+  on:
+    branch: master
