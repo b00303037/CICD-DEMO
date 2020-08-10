@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --base-href=/cicd-demo/",
-    "test": "ng test  --code-coverage",
+    "test": "ng test",
+    "coveralls": "ng test --watch=false --code-coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

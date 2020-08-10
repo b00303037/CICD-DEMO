@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/b00303037/cicd-demo/badge.svg)](https://coveralls.io/github/b00303037/cicd-demo)
 [![Build Status](https://travis-ci.com/b00303037/cicd-demo.svg?branch=master)](https://travis-ci.com/b00303037/cicd-demo)
 
 # CicdDemo

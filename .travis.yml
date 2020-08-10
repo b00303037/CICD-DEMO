@@ -16,9 +16,7 @@ install:
   - npm install
 script:
   - npm run build
-  - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessNoSandbox
-after_success:
-  - cat ./coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - npm run coveralls
 deploy:
   provider: pages
   skip-cleanup: true
